@@ -91,11 +91,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
+                // onPressed: () => Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => ISSLocationScreen(
+                //       getText(),
+                //     ),
+                //   ),
+                // ),
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ISSLocationScreen(
-                      getText(),
+                      dateTime,
                     ),
                   ),
                 ),
