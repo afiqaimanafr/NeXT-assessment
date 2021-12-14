@@ -14,9 +14,8 @@ class ISSLocationApi {
       ),
     );
     if (response.statusCode == 200) {
-      print(response.statusCode);
       final List body = json.decode(response.body);
-      print(response.body);
+
       return body.map((json) => ISSLocationModel.fromJson(json)).toList();
     } else {
       throw Exception();

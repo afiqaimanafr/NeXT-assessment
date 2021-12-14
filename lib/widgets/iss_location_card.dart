@@ -44,7 +44,9 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
       itemCount: selectedTimestamp.length,
       itemBuilder: (ctx, index) {
         final item = selectedTimestamp[index];
-        return Text(item.name);
+        return Text(
+          item.timestamp.toString(),
+        );
       },
     );
   }

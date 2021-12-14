@@ -126,415 +126,476 @@ class _DateTimeAndTimestampScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'DateTime and Timestamp',
-            style: TextStyle(
-              fontFamily: primaryFamilyFont,
-              fontWeight: FontWeight.bold,
-            ),
+      appBar: AppBar(
+        title: const Text(
+          'DateTime and Timestamp',
+          style: TextStyle(
+            fontFamily: primaryFamilyFont,
+            fontWeight: FontWeight.bold,
           ),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
-                ),
-                child: InkWell(
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ISSLocationScreen(timeStamp1),
-                    ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp1),
                   ),
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date1.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date1.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp1.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp1.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp2),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date2.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date2.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp2.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp2.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp3),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date3.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date3.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp3.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp3.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp4),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date4.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date4.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp4.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp4.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp5),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date5.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date5.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp5.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp5.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp6),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date6.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date6.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp6.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp6.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp7),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date7.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date7.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp7.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp7.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp8),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date8.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date8.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp8.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp8.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp9),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date9.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date9.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp9.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp9.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp10),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date10.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date10.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp10.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp10.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp11),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date11.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date11.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp11.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp11.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp12),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date12.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date12.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp12.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp12.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 5,
-                  horizontal: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 5,
+                horizontal: 8,
+              ),
+              child: InkWell(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(timeStamp13),
+                  ),
                 ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Card(
-                    color: kPrimaryColor,
-                    child: ListTile(
-                      title: Text(
-                        'DateTime: ${date13.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                child: Card(
+                  color: kPrimaryColor,
+                  child: ListTile(
+                    title: Text(
+                      'DateTime: ${date13.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      subtitle: Text(
-                        'Timestamp: ${timeStamp13.toString()}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    ),
+                    subtitle: Text(
+                      'Timestamp: ${timeStamp13.toString()}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      trailing: const Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kPrimaryDarkColor,
-                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kPrimaryDarkColor,
                     ),
                   ),
                 ),
               ),
-            ],
-          ),
-        ));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
