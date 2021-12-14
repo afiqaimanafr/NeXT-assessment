@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:intl/intl.dart';
 
-class ISSLocationScreen extends StatefulWidget {
+class DateTimeAndTimestampScreen extends StatefulWidget {
   final DateTime formattedDate;
-  ISSLocationScreen(this.formattedDate);
+  DateTimeAndTimestampScreen(this.formattedDate);
   @override
-  _ISSLocationScreenState createState() => _ISSLocationScreenState();
+  _DateTimeAndTimestampScreenState createState() =>
+      _DateTimeAndTimestampScreenState();
 }
 
-class _ISSLocationScreenState extends State<ISSLocationScreen> {
+class _DateTimeAndTimestampScreenState
+    extends State<DateTimeAndTimestampScreen> {
   DateTime date1,
       date2,
       date3,
