@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:intl/intl.dart';
+import 'package:iss_next_assessment/screens/iss_location_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -14,7 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
     if (dateTime == null) {
       return 'Select DateTime';
     } else {
-      return DateFormat('dd/MM/yyyy HH:mm').format(dateTime);
+      var formattedDate = DateFormat('dd/MM/yyyy HH:mm').format(dateTime);
+      return formattedDate;
     }
   }
 
@@ -22,54 +24,99 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Center(
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+        Container(
+          padding: const EdgeInsets.all(15),
+          width: double.infinity,
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
             ),
-            padding: const EdgeInsets.all(15),
-            width: double.infinity,
-            child: Card(
-              color: kPrimaryColor,
-              child: Column(
-                children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.all(10.0),
+            color: kPrimaryColor,
+            child: Column(
+              children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    'Pick Date and Time',
+                    style: TextStyle(
+                      fontFamily: primaryFamilyFont,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    primary: kPrimaryLightColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () => pickDateTime(context),
+                  label: FittedBox(
                     child: Text(
-                      'Pick Date and Time',
-                      style: TextStyle(
-                        fontFamily: primaryFamilyFont,
-                        fontSize: 20,
+                      getText(),
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: kPrimaryDarkColor,
+                        fontFamily: secondaryFamilyFont,
                       ),
                     ),
                   ),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      primary: kPrimaryLightColor,
-                    ),
-                    onPressed: () => pickDateTime(context),
-                    label: FittedBox(
-                      child: Text(
-                        getText(),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: kPrimaryDarkColor,
-                          fontFamily: secondaryFamilyFont,
-                        ),
-                      ),
-                    ),
-                    icon: const Icon(Icons.calendar_today),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                ],
-              ),
+                  icon: const Icon(Icons.calendar_today),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+              ],
             ),
           ),
-        )
+        ),
+        getText() != 'Select DateTime'
+            ? ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  primary: kPrimaryColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ISSLocationScreen(
+                      getText(),
+                    ),
+                  ),
+                ),
+                label: const FittedBox(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                    ),
+                    child: Text(
+                      'Click here to see the ISS location',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: kPrimaryDarkColor,
+                        fontFamily: secondaryFamilyFont,
+                      ),
+                    ),
+                  ),
+                ),
+                icon: const Icon(Icons.gps_fixed),
+              )
+            : const Text(
+                'Please select the date and the time to see the ISS location',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: kPrimaryDarkColor,
+                  fontFamily: secondaryFamilyFont,
+                ),
+                textAlign: TextAlign.center,
+              ),
       ],
     );
   }
