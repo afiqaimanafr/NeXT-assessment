@@ -24,53 +24,61 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
-          padding: const EdgeInsets.all(15),
-          width: double.infinity,
-          child: Card(
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
-            ),
-            color: kPrimaryColor,
-            child: Column(
-              children: <Widget>[
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Text(
-                    'Pick Date and Time',
-                    style: TextStyle(
-                      fontFamily: primaryFamilyFont,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+        Center(
+          child: Container(
+            padding: const EdgeInsets.all(15),
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: kPrimaryColor,
+              child: Column(
+                children: <Widget>[
+                  const Padding(
+                    padding: EdgeInsets.only(
+                      left: 30.0,
+                      right: 30,
+                      top: 30,
                     ),
-                  ),
-                ),
-                ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    primary: kPrimaryLightColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  onPressed: () => pickDateTime(context),
-                  label: FittedBox(
                     child: Text(
-                      getText(),
-                      style: const TextStyle(
+                      'Pick Date and Time',
+                      style: TextStyle(
+                        fontFamily: primaryFamilyFont,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: kPrimaryDarkColor,
-                        fontFamily: secondaryFamilyFont,
                       ),
                     ),
                   ),
-                  icon: const Icon(Icons.calendar_today),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-              ],
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      primary: kPrimaryLightColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                    ),
+                    onPressed: () => pickDateTime(context),
+                    label: FittedBox(
+                      child: Text(
+                        getText(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: kPrimaryDarkColor,
+                          fontFamily: secondaryFamilyFont,
+                        ),
+                      ),
+                    ),
+                    icon: const Icon(Icons.calendar_today),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
