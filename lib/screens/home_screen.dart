@@ -23,64 +23,65 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Center(
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            child: Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              color: kPrimaryColor,
-              child: Column(
-                children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.only(
-                      left: 30.0,
-                      right: 30,
-                      top: 30,
+          child: Card(
+            elevation: 5,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            color: kPrimaryColor,
+            child: Column(
+              children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.only(
+                    left: 30.0,
+                    right: 30,
+                    top: 30,
+                  ),
+                  child: Text(
+                    'Pick Date and Time',
+                    style: TextStyle(
+                      fontFamily: primaryFamilyFont,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    primary: kPrimaryLightColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () => pickDateTime(context),
+                  label: FittedBox(
                     child: Text(
-                      'Pick Date and Time',
-                      style: TextStyle(
-                        fontFamily: primaryFamilyFont,
-                        fontSize: 20,
+                      getText(),
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: kPrimaryDarkColor,
+                        fontFamily: secondaryFamilyFont,
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      primary: kPrimaryLightColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                    ),
-                    onPressed: () => pickDateTime(context),
-                    label: FittedBox(
-                      child: Text(
-                        getText(),
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: kPrimaryDarkColor,
-                          fontFamily: secondaryFamilyFont,
-                        ),
-                      ),
-                    ),
-                    icon: const Icon(Icons.calendar_today),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                ],
-              ),
+                  icon: const Icon(Icons.calendar_today),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+              ],
             ),
           ),
+        ),
+        const SizedBox(
+          height: 15,
         ),
         getText() != 'Select DateTime'
             ? ElevatedButton.icon(
@@ -153,8 +154,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final newDate = await showDatePicker(
       context: context,
       initialDate: dateTime ?? initialDate,
-      firstDate: DateTime(DateTime.now().year - 5),
-      lastDate: DateTime(DateTime.now().year + 5),
+      firstDate: DateTime(DateTime.now().year - 20),
+      lastDate: initialDate,
     );
 
     if (newDate == null) return null;
