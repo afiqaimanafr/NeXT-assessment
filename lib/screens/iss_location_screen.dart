@@ -140,24 +140,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date1.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date1.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp1.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp1.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -167,24 +170,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date2.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date2.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp2.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp2.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -194,24 +200,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date3.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date3.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp3.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp3.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -221,24 +230,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date4.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date4.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp4.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp4.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -248,24 +260,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date5.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date5.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp5.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp5.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -275,24 +290,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date6.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date6.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp6.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp6.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -302,24 +320,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date7.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date7.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp7.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp7.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -329,24 +350,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date8.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date8.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp8.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp8.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -356,24 +380,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date9.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date9.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp9.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp9.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -383,24 +410,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date10.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date10.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp10.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp10.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -410,24 +440,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date11.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date11.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp11.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp11.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -437,24 +470,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date12.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date12.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp12.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp12.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
@@ -464,24 +500,27 @@ class _ISSLocationScreenState extends State<ISSLocationScreen> {
                   vertical: 5,
                   horizontal: 8,
                 ),
-                child: Card(
-                  color: kPrimaryColor,
-                  child: ListTile(
-                    title: Text(
-                      'DateTime: ${date13.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                child: InkWell(
+                  onTap: () {},
+                  child: Card(
+                    color: kPrimaryColor,
+                    child: ListTile(
+                      title: Text(
+                        'DateTime: ${date13.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      'Timestamp: ${timeStamp13.toString()}',
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                      subtitle: Text(
+                        'Timestamp: ${timeStamp13.toString()}',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    trailing: const Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kPrimaryDarkColor,
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kPrimaryDarkColor,
+                      ),
                     ),
                   ),
                 ),
