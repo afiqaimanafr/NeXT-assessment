@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -7,6 +8,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  DateTime dateTime;
+
+  String getText() {
+    if (dateTime == null) {
+      return 'Select DateTime';
+    } else {
+      return DateFormat('MM/dd/yyyy HH:mm').format(dateTime);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,17 +48,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: ElevatedButton.styleFrom(
                       primary: kPrimaryLightColor,
                     ),
-                    onPressed: () {},
-                    label: const FittedBox(
+                    onPressed: () => pickDateTime(context),
+                    label: FittedBox(
                       child: Text(
-                        'Select DateTime',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: kPrimaryDarkColor,
-                          fontFamily: secondaryFamilyFont,
-                        ),
+                        getText(),
                       ),
+                      // child: Text(
+                      //   'Select DateTime',
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 20,
+                      //     color: kPrimaryDarkColor,
+                      //     fontFamily: secondaryFamilyFont,
+                      //   ),
+                      // ),
                     ),
                     icon: const Icon(Icons.calendar_today),
                   ),
@@ -61,5 +75,51 @@ class _HomeScreenState extends State<HomeScreen> {
         )
       ],
     );
+  }
+
+  Future pickDateTime(BuildContext context) async {
+    final date = await pickDate(context);
+    if (date == null) return;
+
+    final time = await pickTime(context);
+    if (time == null) return;
+
+    setState(() {
+      dateTime = DateTime(
+        date.year,
+        date.month,
+        date.day,
+        time.hour,
+        time.minute,
+      );
+    });
+  }
+
+  Future<DateTime> pickDate(BuildContext context) async {
+    final initialDate = DateTime.now();
+    final newDate = await showDatePicker(
+      context: context,
+      initialDate: dateTime ?? initialDate,
+      firstDate: DateTime(DateTime.now().year - 5),
+      lastDate: DateTime(DateTime.now().year + 5),
+    );
+
+    if (newDate == null) return null;
+
+    return newDate;
+  }
+
+  Future<TimeOfDay> pickTime(BuildContext context) async {
+    const initialTime = TimeOfDay(hour: 0, minute: 0);
+    final newTime = await showTimePicker(
+      context: context,
+      initialTime: dateTime != null
+          ? TimeOfDay(hour: dateTime.hour, minute: dateTime.minute)
+          : initialTime,
+    );
+
+    if (newTime == null) return null;
+
+    return newTime;
   }
 }
