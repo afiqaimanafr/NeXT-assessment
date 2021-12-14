@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:intl/intl.dart';
-import 'package:iss_next_assessment/screens/iss_location_screen.dart';
+import 'package:iss_next_assessment/screens/datetime_and_timestamp_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -91,14 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
-                // onPressed: () => Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => ISSLocationScreen(
-                //       getText(),
-                //     ),
-                //   ),
-                // ),
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
