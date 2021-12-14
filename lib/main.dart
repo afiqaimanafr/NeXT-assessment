@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iss_next_assessment/constant.dart';
 import 'package:iss_next_assessment/screens/home_screen.dart';
 
 void main() {
@@ -13,9 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ISS NeXT Assessment',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: kPrimaryColor,
       ),
-      home: const HomeScreen(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'ISS NeXT Assessment',
+            style: TextStyle(
+              fontFamily: primaryFamilyFont,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        body: HomeScreen(),
+      ),
       debugShowCheckedModeBanner: false,
     );
   }
