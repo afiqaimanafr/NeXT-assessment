@@ -38,14 +38,14 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
   Widget buildLocationDetail(
       List<ISSLocationModel> location, BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final selectedTimestamp = location
-        .where((timestampSelected) =>
-            timestampSelected.timestamp == widget.timestamp)
-        .toList();
+    // final selectedTimestamp = location
+    //     .where((timestampSelected) =>
+    //         timestampSelected.timestamp == widget.timestamp)
+    //     .toList();
     return ListView.builder(
-      itemCount: selectedTimestamp.length,
+      itemCount: location.length,
       itemBuilder: (ctx, index) {
-        final item = selectedTimestamp[index];
+        final item = location[index];
         return Container(
           padding: const EdgeInsets.all(15),
           width: size.width * 0.8,
