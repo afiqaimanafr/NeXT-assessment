@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (dateTime == null) {
       return 'Select DateTime';
     } else {
-      return DateFormat('MM/dd/yyyy HH:mm').format(dateTime);
+      return DateFormat('dd/MM/yyyy HH:mm').format(dateTime);
     }
   }
 
@@ -52,16 +52,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     label: FittedBox(
                       child: Text(
                         getText(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: kPrimaryDarkColor,
+                          fontFamily: secondaryFamilyFont,
+                        ),
                       ),
-                      // child: Text(
-                      //   'Select DateTime',
-                      //   style: TextStyle(
-                      //     fontWeight: FontWeight.bold,
-                      //     fontSize: 20,
-                      //     color: kPrimaryDarkColor,
-                      //     fontFamily: secondaryFamilyFont,
-                      //   ),
-                      // ),
                     ),
                     icon: const Icon(Icons.calendar_today),
                   ),
