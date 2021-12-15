@@ -302,7 +302,7 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                       const Padding(
                         padding: EdgeInsets.only(
                           right: 10,
-                          bottom: 10,
+                          bottom: 20,
                         ),
                         child: Text(
                           'Visibility:',
@@ -316,7 +316,7 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                       Padding(
                         padding: const EdgeInsets.only(
                           right: 10,
-                          bottom: 10,
+                          bottom: 20,
                         ),
                         child: Text(
                           item.visibility,
@@ -328,6 +328,30 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                       ),
                     ],
                   ),
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    primary: kPrimaryLightColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () {},
+                  label: const FittedBox(
+                    child: Text(
+                      'Location\'s Weather',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: kPrimaryDarkColor,
+                        fontFamily: secondaryFamilyFont,
+                      ),
+                    ),
+                  ),
+                  icon: const Icon(Icons.wb_sunny),
+                ),
+                const SizedBox(
+                  height: 10,
                 ),
               ],
             ),
