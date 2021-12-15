@@ -39,10 +39,7 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
   Widget buildLocationDetail(
       List<ISSLocationModel> location, BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    // final selectedTimestamp = location
-    //     .where((timestampSelected) =>
-    //         timestampSelected.timestamp == widget.timestamp)
-    //     .toList();
+
     return ListView.builder(
       itemCount: location.length,
       itemBuilder: (ctx, index) {

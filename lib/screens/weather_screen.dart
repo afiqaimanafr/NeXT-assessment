@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
+import 'package:iss_next_assessment/widgets/weather_card.dart';
 
 class WeatherScreen extends StatefulWidget {
   String lat, long;
@@ -26,8 +27,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
           ),
         ),
       ),
-      body: Center(
-        child: Text('Weather'),
+      body: WeatherCard(
+        lat: widget.lat,
+        long: widget.long,
+        time: widget.time,
       ),
     );
   }
