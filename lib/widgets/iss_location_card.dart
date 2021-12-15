@@ -3,7 +3,6 @@ import 'package:iss_next_assessment/constant.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_api.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_model.dart';
 import 'package:iss_next_assessment/screens/timezone_screen.dart';
-import 'package:iss_next_assessment/screens/weather_screen.dart';
 
 class ISSLocationCard extends StatefulWidget {
   int timestamp;
