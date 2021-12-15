@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_api.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_model.dart';
+import 'package:iss_next_assessment/screens/timezone_screen.dart';
 import 'package:iss_next_assessment/screens/weather_screen.dart';
 
 class ISSLocationCard extends StatefulWidget {
@@ -337,16 +338,15 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                   onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => WeatherScreen(
+                      builder: (context) => TimeZoneScreen(
                         lat: item.latitude.toString(),
                         long: item.longitude.toString(),
-                        time: item.timestamp,
                       ),
                     ),
                   ),
                   label: const FittedBox(
                     child: Text(
-                      'Location\'s Weather',
+                      'Location\'s Time Zone',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -355,7 +355,7 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                       ),
                     ),
                   ),
-                  icon: const Icon(Icons.wb_sunny),
+                  icon: const Icon(Icons.timelapse),
                 ),
                 const SizedBox(
                   height: 10,

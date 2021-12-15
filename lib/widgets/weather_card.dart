@@ -20,10 +20,11 @@ class _WeatherCardState extends State<WeatherCard> {
         future: WeatherApi.getISSWeather(
           widget.lat,
           widget.long,
-          widget.time,
         ),
         builder: (context, snapshot) {
           final weather = snapshot.data;
+          // ignore: avoid_print
+          print(weather);
           if (weather != null) {
             switch (snapshot.connectionState) {
               default:
