@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
+import 'package:iss_next_assessment/screens/json_screen.dart';
 
 class ExtensionBDateTimeScreen extends StatefulWidget {
   final DateTime formattedDate;
@@ -44,7 +45,12 @@ class _ExtensionBDateTimeScreenState extends State<ExtensionBDateTimeScreen> {
                 horizontal: 8,
               ),
               child: InkWell(
-                onTap: () {},
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => JsonScreen(timeStamp),
+                  ),
+                ),
                 child: Card(
                   elevation: 5,
                   shape: RoundedRectangleBorder(
