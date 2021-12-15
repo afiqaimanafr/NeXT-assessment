@@ -1,29 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
-import 'package:iss_next_assessment/widgets/time_zone_card.dart';
+import 'package:iss_next_assessment/widgets/satellite_information_card.dart';
 
-class TimeZoneScreen extends StatelessWidget {
-  // String lat, long;
-  // TimeZoneScreen({this.lat, this.long});
+class SatelliteInformationScreen extends StatelessWidget {
   int time;
-  TimeZoneScreen(this.time);
-
+  SatelliteInformationScreen(this.time);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Location\'s Time Zone',
+          'Satellite Information',
           style: TextStyle(
             fontFamily: primaryFamilyFont,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      // body: TimeZoneCard(
-      //   lat: lat,
-      //   long: long,
-      // ),
+      body: SatelliteInformationCard(time),
     );
   }
 }

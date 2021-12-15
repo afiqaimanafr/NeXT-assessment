@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_api.dart';
 import 'package:iss_next_assessment/models/iss_location/iss_location_model.dart';
+import 'package:iss_next_assessment/screens/satellite_information_screen.dart';
 import 'package:iss_next_assessment/screens/timezone_screen.dart';
 
 class ISSLocationCard extends StatefulWidget {
@@ -219,114 +220,6 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      const Padding(
-                        padding: EdgeInsets.only(
-                          right: 10,
-                          bottom: 10,
-                        ),
-                        child: Text(
-                          'Altitude:',
-                          style: TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          right: 10,
-                          bottom: 10,
-                        ),
-                        child: Text(
-                          item.altitude.toString(),
-                          style: const TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      const Padding(
-                        padding: EdgeInsets.only(
-                          right: 10,
-                          bottom: 10,
-                        ),
-                        child: Text(
-                          'Velocity:',
-                          style: TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          right: 10,
-                          bottom: 10,
-                        ),
-                        child: Text(
-                          item.velocity.toString(),
-                          style: const TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                  ),
-                  child: Row(
-                    children: <Widget>[
-                      const Padding(
-                        padding: EdgeInsets.only(
-                          right: 10,
-                          bottom: 15,
-                        ),
-                        child: Text(
-                          'Visibility:',
-                          style: TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          right: 10,
-                          bottom: 15,
-                        ),
-                        child: Text(
-                          item.visibility,
-                          style: const TextStyle(
-                            fontFamily: secondaryFamilyFont,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                     primary: kPrimaryLightColor,
@@ -337,15 +230,14 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                   onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => TimeZoneScreen(
-                        lat: item.latitude.toString(),
-                        long: item.longitude.toString(),
+                      builder: (context) => SatelliteInformationScreen(
+                        widget.timestamp,
                       ),
                     ),
                   ),
                   label: const FittedBox(
                     child: Text(
-                      'Location\'s Time Zone',
+                      'Satellite\'s Information',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -354,7 +246,7 @@ class _ISSLocationCardState extends State<ISSLocationCard> {
                       ),
                     ),
                   ),
-                  icon: const Icon(Icons.timelapse),
+                  icon: const Icon(Icons.info),
                 ),
                 const SizedBox(
                   height: 10,
