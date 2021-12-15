@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iss_next_assessment/constant.dart';
 import 'package:intl/intl.dart';
+import 'package:iss_next_assessment/screens/extension_b_datetime_screen.dart';
 
 class ExtensionBScreen extends StatefulWidget {
   @override
@@ -83,32 +84,41 @@ class _ExtensionBScreenState extends State<ExtensionBScreen> {
           height: 15,
         ),
         getText() != 'Select DateTime'
-            ? ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  primary: kPrimaryColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                ),
-                onPressed: () {},
-                label: const FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10,
+            ? Container(
+                width: MediaQuery.of(context).size.width * 0.9,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    primary: kPrimaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child: Text(
-                      'Click here to see the required data in JSON format',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: kPrimaryDarkColor,
-                        fontFamily: secondaryFamilyFont,
+                  ),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExtensionBDateTimeScreen(
+                        dateTime,
                       ),
                     ),
                   ),
+                  label: const FittedBox(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 10,
+                      ),
+                      child: Text(
+                        'Click here to see the required data in JSON format',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: kPrimaryDarkColor,
+                          fontFamily: secondaryFamilyFont,
+                        ),
+                      ),
+                    ),
+                  ),
+                  icon: const Icon(Icons.gps_fixed),
                 ),
-                icon: const Icon(Icons.gps_fixed),
               )
             : const Text(
                 'Please select the date and the time to receive the required data in JSON format',
